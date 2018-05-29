@@ -19,30 +19,30 @@
 import { isUrl } from '../utils/utils';
 
 const menuData = [{
-  name: 'Monitor',
+  name: '应用性能管理',
   icon: 'dashboard',
   path: 'monitor',
   children: [
     {
-      name: 'Dashboard',
+      name: '桌面',
       path: 'dashboard',
     },
     {
-      name: 'Topology',
+      name: '拓扑',
       path: 'topology',
     }, {
-      name: 'Application',
+      name: '应用',
       path: 'application',
     }, {
-      name: 'Service',
+      name: '服务',
       path: 'service',
     }, {
-      name: 'Alarm',
+      name: '报警',
       path: 'alarm',
     },
   ],
 }, {
-  name: 'Trace',
+  name: '调用链追踪',
   icon: 'exception',
   path: 'trace',
 }];

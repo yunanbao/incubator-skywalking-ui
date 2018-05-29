@@ -107,9 +107,9 @@ class BasicLayout extends React.PureComponent {
   getPageTitle() {
     const { routerData, location } = this.props;
     const { pathname } = location;
-    let title = 'Sky Walking';
+    let title = '云安宝MSS';
     if (routerData[pathname] && routerData[pathname].name) {
-      title = `${routerData[pathname].name} - SW`;
+      title = `${routerData[pathname].name} - 云安宝`;
     }
     return title;
   }
@@ -250,7 +250,7 @@ class BasicLayout extends React.PureComponent {
             </Switch>
           </Content>
           <GlobalFooter
-            links={[{
+            /* links={[{
               key: 'SkyWalking',
               title: 'Apache SkyWalking',
               href: 'http://skywalking.io',
@@ -260,10 +260,10 @@ class BasicLayout extends React.PureComponent {
               title: 'GitHub',
               href: 'https://github.com/apache/incubator-skywalking',
               blankTarget: true,
-            }]}
+            }]} */
             copyright={
               <div>
-                Copyright <Icon type="copyright" /> 2018 The Apache Software Foundation, Licensed under the Apache License, Version 2.0.
+                <Icon type="copyright" /> 2014-2018 深圳云安宝科技有限公司 版权所有
               </div>
             }
           />

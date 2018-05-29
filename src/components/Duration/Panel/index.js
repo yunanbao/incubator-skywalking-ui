@@ -56,37 +56,37 @@ class DurationPanel extends PureComponent {
         from() {
           return moment().subtract(15, 'minutes');
         },
-        label: 'Last 15 minutes',
+        label: '最新15分钟',
       },
       { ...now,
         from() {
           return moment().subtract(30, 'minutes');
         },
-        label: 'Last 30 minutes',
+        label: '最新30分钟',
       },
       { ...now,
         from() {
           return moment().subtract(1, 'hours');
         },
-        label: 'Last 1 hour',
+        label: '最新1小时',
       },
       { ...now,
         from() {
           return moment().subtract(6, 'hours');
         },
-        label: 'Last 6 hours',
+        label: '最新6小时',
       },
       { ...now,
         from() {
           return moment().subtract(12, 'hours');
         },
-        label: 'Last 12 hours',
+        label: '最新12小时',
       },
       { ...now,
         from() {
           return moment().subtract(24, 'hours');
         },
-        label: 'Last 24 hours',
+        label: '最新24小时',
       },
     ];
     this.shortcutsDays = [
@@ -94,37 +94,37 @@ class DurationPanel extends PureComponent {
         from() {
           return moment().subtract(2, 'days');
         },
-        label: 'Last 2 days',
+        label: '最新2天',
       },
       { ...now,
         from() {
           return moment().subtract(7, 'days');
         },
-        label: 'Last 7 days',
+        label: '最新7天',
       },
       { ...now,
         from() {
           return moment().subtract(14, 'days');
         },
-        label: 'Last 14 days',
+        label: '最新14天',
       },
       { ...now,
         from() {
           return moment().subtract(30, 'days');
         },
-        label: 'Last 30 days',
+        label: '最新30天',
       },
       { ...now,
         from() {
           return moment().subtract(6, 'months');
         },
-        label: 'Last 6 months',
+        label: '最新6个月',
       },
       { ...now,
         from() {
           return moment().subtract(12, 'months');
         },
-        label: 'Last 12 months',
+        label: '最新12个月',
       },
     ];
   }
@@ -190,7 +190,7 @@ class DurationPanel extends PureComponent {
           >
             <FormItem
               {...formItemLayout}
-              label="Time Range"
+              label="时间范围"
             >
               {getFieldDecorator('range-time-picker')(
                 <RangePicker showTime disabledDate={this.disabledDate} format="YYYY-MM-DD HH:mm" />
@@ -198,14 +198,14 @@ class DurationPanel extends PureComponent {
             </FormItem>
             <FormItem
               {...formItemLayout}
-              label="Reloading every "
+              label="自动刷新"
             >
               {getFieldDecorator('step')(
                 <Select style={{ width: 170 }}>
-                  <Option value="0">off</Option>
-                  <Option value="5000">5s</Option>
-                  <Option value="10000">10s</Option>
-                  <Option value="30000">30s</Option>
+                  <Option value="0">关闭</Option>
+                  <Option value="5000">5秒</Option>
+                  <Option value="10000">10秒</Option>
+                  <Option value="30000">30秒</Option>
                 </Select>
               )}
             </FormItem>
@@ -216,7 +216,7 @@ class DurationPanel extends PureComponent {
                 type="primary"
                 htmlType="submit"
               >
-                Apply
+                确定
               </Button>
             </FormItem>
           </Form>

@@ -65,32 +65,32 @@ export default class Dashboard extends PureComponent {
         <Row gutter={8}>
           <Col xs={24} sm={24} md={12} lg={6} xl={6}>
             <ChartCard
-              title="App"
-              action={this.renderAction('Show application details', '/monitor/application')}
-              avatar={<img style={{ width: 56, height: 56 }} src="img/icon/app.png" alt="app" />}
+              title="应用"
+              action={this.renderAction('应用详情', '/monitor/application')}
+              avatar={<img style={{ width: 56, height: 56 }} src="img/icon/app.png" alt="应用" />}
               total={data.getClusterBrief.numOfApplication}
             />
           </Col>
           <Col xs={24} sm={24} md={12} lg={6} xl={6}>
             <ChartCard
-              title="Service"
-              action={this.renderAction('Show service details', '/monitor/service')}
-              avatar={<img style={{ width: 56, height: 56 }} src="img/icon/service.png" alt="service" />}
+              title="服务"
+              action={this.renderAction('服务详情', '/monitor/service')}
+              avatar={<img style={{ width: 56, height: 56 }} src="img/icon/service.png" alt="服务" />}
               total={data.getClusterBrief.numOfService}
             />
           </Col>
           <Col xs={24} sm={24} md={12} lg={6} xl={6}>
             <ChartCard
-              title="DB & Cache"
-              avatar={<img style={{ width: 56, height: 56 }} src="img/icon/database.png" alt="database" />}
+              title="数据库 & 缓存"
+              avatar={<img style={{ width: 56, height: 56 }} src="img/icon/database.png" alt="数据库 & 缓存" />}
               total={data.getClusterBrief.numOfDatabase
                 + data.getClusterBrief.numOfCache}
             />
           </Col>
           <Col xs={24} sm={24} md={12} lg={6} xl={6}>
             <ChartCard
-              title="MQ"
-              avatar={<img style={{ width: 56, height: 56 }} src="img/icon/mq.png" alt="mq" />}
+              title="消息队列"
+              avatar={<img style={{ width: 56, height: 56 }} src="img/icon/mq.png" alt="消息队列" />}
               total={data.getClusterBrief.numOfMQ}
             />
           </Col>
@@ -98,7 +98,7 @@ export default class Dashboard extends PureComponent {
         <Row gutter={8}>
           <Col xs={24} sm={24} md={24} lg={12} xl={12} style={{ marginTop: 8 }}>
             <ChartCard
-              title="Calls HeatMap"
+              title="调用热力图"
               contentHeight={200}
             >
               <HeatMap
@@ -110,10 +110,10 @@ export default class Dashboard extends PureComponent {
           </Col>
           <Col xs={24} sm={24} md={24} lg={12} xl={12} style={{ marginTop: 8 }}>
             <ChartCard
-              title="Avg Application Alarm"
-              avatar={<img style={{ width: 56, height: 56 }} src="img/icon/alert.png" alt="app" />}
+              title="应用平均报警率"
+              avatar={<img style={{ width: 56, height: 56 }} src="img/icon/alert.png" alt="平均应用报警率" />}
               total={`${avg.toFixed(2)}%`}
-              footer={<div><Field label="Max" value={`${max}%`} /> <Field label="Min" value={`${min}%`} /></div>}
+              footer={<div><Field label="最大" value={`${max}%`} /> <Field label="最小" value={`${min}%`} /></div>}
               contentHeight={100}
             >
               <MiniArea
@@ -134,7 +134,7 @@ export default class Dashboard extends PureComponent {
         <Row gutter={8}>
           <Col xs={24} sm={24} md={24} lg={16} xl={16} style={{ marginTop: 8 }}>
             <Card
-              title="Slow Service"
+              title="慢服务Top10"
               bordered={false}
               bodyStyle={{ padding: '0px 10px' }}
             >
@@ -147,7 +147,7 @@ export default class Dashboard extends PureComponent {
           </Col>
           <Col xs={24} sm={24} md={24} lg={8} xl={8} style={{ marginTop: 8 }}>
             <Card
-              title="Application Throughput"
+              title="应用每分钟调用次数Top10"
               bordered={false}
               bodyStyle={{ padding: '0px 10px' }}
             >

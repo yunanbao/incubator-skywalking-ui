@@ -151,7 +151,7 @@ export default class Trace extends PureComponent {
       callback(row) {
         return {
           ...row,
-          state: row.isError ? 'error' : 'success',
+          state: row.isError ? '错误' : '成功',
           startTime: moment(parseInt(row.start, 10)).format('YYYY-MM-DD HH:mm:ss.SSS'),
         };
       },
@@ -188,7 +188,7 @@ export default class Trace extends PureComponent {
         <Geom
           type="point"
           position="startTime*duration"
-          color={['state', state => (state === 'error' ? 'red' : '#1890ff')]}
+          color={['state', state => (state === '错误' ? 'red' : '#1890ff')]}
           opacity={0.65}
           shape="circle"
           size={4}
@@ -209,11 +209,11 @@ export default class Trace extends PureComponent {
     const { trace: { variables: { options } } } = this.props;
     return (
       <Form onSubmit={this.handleSearch} layout="vertical">
-        <FormItem label="Time Range">
+        <FormItem label="时间范围">
           {getFieldDecorator('range-time-picker', {
             rules: [{
               required: true,
-              message: 'Please select the correct date',
+              message: '请选择正确的时间',
             }],
           })(
             <RangePicker
@@ -224,9 +224,9 @@ export default class Trace extends PureComponent {
             />
           )}
         </FormItem>
-        <FormItem label="Application">
+        <FormItem label="应用">
           {getFieldDecorator('applicationId')(
-            <Select placeholder="All application" style={{ width: '100%' }}>
+            <Select placeholder="全部应用" style={{ width: '100%' }}>
               {options.applicationId && options.applicationId.map((app) => {
                   return (
                     <Option key={app.key ? app.key : -1} value={app.key}>
@@ -236,24 +236,24 @@ export default class Trace extends PureComponent {
             </Select>
           )}
         </FormItem>
-        <FormItem label="Trace State">
+        <FormItem label="Trace状态">
           {getFieldDecorator('traceState')(
-            <Select placeholder="All" style={{ width: '100%' }}>
-              <Option key="success" value="SUCCESS">Success</Option>
-              <Option key="error" value="ERROR">Error</Option>
-              <Option key="all" value="ALL">All</Option>
+            <Select placeholder="全部状态" style={{ width: '100%' }}>
+              <Option key="all" value="ALL">全部状态</Option>
+              <Option key="success" value="SUCCESS">成功</Option>
+              <Option key="error" value="ERROR">错误</Option>
             </Select>
           )}
         </FormItem>
-        <FormItem label="Order By">
+        <FormItem label="排序">
           {getFieldDecorator('queryOrder')(
-            <Select placeholder="Start Time" style={{ width: '100%' }}>
-              <Option key="BY_START_TIME" value="BY_START_TIME">Start Time</Option>
-              <Option key="BY_DURATION" value="BY_DURATION">Duration</Option>
+            <Select placeholder="开始时间" style={{ width: '100%' }}>
+              <Option key="BY_START_TIME" value="BY_START_TIME">开始时间</Option>
+              <Option key="BY_DURATION" value="BY_DURATION">响应时间</Option>
             </Select>
           )}
         </FormItem>
-        <FormItem label="OperationName">
+        <FormItem label="操作名称">
           {getFieldDecorator('operationName')(
             <Input placeholder="eg Kafka/Trace-topic-1/Consumer" />
           )}
@@ -265,14 +265,14 @@ export default class Trace extends PureComponent {
         </FormItem>
         <Row>
           <Col xs={24} sm={24} md={24} lg={12} xl={12}>
-            <FormItem label="Min Duration">
+            <FormItem label="最小响应时间(ms)">
               {getFieldDecorator('minTraceDuration')(
                 <InputNumber placeholder="eg 100" />
               )}
             </FormItem>
           </Col>
           <Col xs={24} sm={24} md={24} lg={12} xl={12}>
-            <FormItem label="Max Duration">
+            <FormItem label="最大响应时间(ms)">
               {getFieldDecorator('maxTraceDuration')(
                 <InputNumber placeholder="eg 5000" />
               )}
@@ -280,7 +280,7 @@ export default class Trace extends PureComponent {
           </Col>
         </Row>
         <FormItem>
-          <Button type="primary" htmlType="submit">Search</Button>
+          <Button type="primary" htmlType="submit">搜索</Button>
         </FormItem>
       </Form>
     );

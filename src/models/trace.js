@@ -111,7 +111,7 @@ export default generateModal({
   optionsQuery,
   defaultOption: {
     applicationId: {
-      label: 'All Application',
+      label: '全部应用',
     },
   },
   dataQuery,

@@ -354,11 +354,11 @@ class TraceStack extends PureComponent {
           >
             {this.renderTitle([
               {
-                name: 'Start Time',
+                name: '开始时间',
                 count: `${moment(span.startTime).format(timeFormat)}`,
               },
               {
-                name: 'Duration',
+                name: '响应时间',
                 count: `${formatDuration(span.duration)}`,
               },
             ])}

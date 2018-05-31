@@ -122,7 +122,7 @@ export default class Topology extends PureComponent {
         <Row gutter={8}>
           <Col {...{ ...colResponsiveProps, xl: 18, lg: 16 }}>
             <ChartCard
-              title="Topology Map"
+              title="拓扑图"
               avatar={<Avatar icon="fork" style={{ color: '#1890ff', backgroundColor: '#ffffff' }} />}
               action={(
                 <Radio.Group value={layout.name} onChange={this.handleLayoutChange} size="normal">
@@ -153,7 +153,7 @@ export default class Topology extends PureComponent {
               </Card>
             )
             : (
-              <Card title="Overview" style={{ height: 672 }}>
+              <Card title="详情" style={{ height: 672 }}>
                 <DescriptionList layout="vertical" >
                   <Description term="Total">{data.getClusterTopology.nodes.length}</Description>
                   {this.renderNodeType()}

@@ -22,8 +22,8 @@ import { routerRedux } from 'dva/router';
 import store from '../index';
 
 const codeMessage = {
-  404: 'No resource',
-  500: 'Server error',
+  404: '服务不存在',
+  500: '服务错误',
 };
 function checkStatus(response) {
   if (response.status >= 200 && response.status < 300) {
@@ -31,7 +31,7 @@ function checkStatus(response) {
   }
   const errortext = codeMessage[response.status] || response.statusText;
   notification.error({
-    message: `Request Error ${response.status}: ${response.url}`,
+    message: `请求错误 ${response.status}: ${response.url}`,
     description: errortext,
   });
   const error = new Error(errortext);

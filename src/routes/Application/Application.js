@@ -118,7 +118,7 @@ export default class Application extends PureComponent {
                 showSearch
                 optionFilterProp="children"
                 style={{ width: 200 }}
-                placeholder="Select a application"
+                placeholder="请选择应用"
                 labelInValue
                 onSelect={this.handleSelect.bind(this)}
               >
@@ -136,7 +136,7 @@ export default class Application extends PureComponent {
           <Row gutter={0}>
             <Col {...{ ...middleColResponsiveProps, xl: 16, lg: 12, md: 24 }}>
               <Card
-                title="Application Map"
+                title="应用拓扑图"
                 bordered={false}
                 bodyStyle={{ padding: 0 }}
               >
@@ -169,7 +169,7 @@ export default class Application extends PureComponent {
           <Row gutter={8}>
             <Col {...{ ...middleColResponsiveProps, xl: 12, lg: 12, md: 24 }}>
               <Card
-                title="Running Server"
+                title="每分钟调用次数"
                 bordered={false}
                 bodyStyle={{ padding: 5 }}
               >
@@ -195,7 +195,7 @@ export default class Application extends PureComponent {
             </Col>
             <Col {...{ ...middleColResponsiveProps, xl: 12, lg: 12, md: 24 }}>
               <Card
-                title="Slow Service"
+                title="慢服务Top10"
                 bordered={false}
                 bodyStyle={{ padding: '0px 10px' }}
               >

@@ -109,7 +109,7 @@ class BasicLayout extends React.PureComponent {
     const { pathname } = location;
     let title = '云安宝MSS';
     if (routerData[pathname] && routerData[pathname].name) {
-      title = `${routerData[pathname].name} - 云安宝`;
+      title = `${routerData[pathname].name} - 云安宝MSS`;
     }
     return title;
   }

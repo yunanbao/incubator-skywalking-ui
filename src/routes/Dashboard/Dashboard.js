@@ -113,7 +113,7 @@ export default class Dashboard extends PureComponent {
               title="应用平均报警率"
               avatar={<img style={{ width: 56, height: 56 }} src="img/icon/alert.png" alt="平均应用报警率" />}
               total={`${avg.toFixed(2)}%`}
-              footer={<div><Field label="最大" value={`${max}%`} /> <Field label="最小" value={`${min}%`} /></div>}
+              footer={<div><Field label="最高" value={`${max}%`} /> <Field label="最低" value={`${min}%`} /></div>}
               contentHeight={100}
             >
               <MiniArea

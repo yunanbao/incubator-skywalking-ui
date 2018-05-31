@@ -121,7 +121,7 @@ export default class Alarm extends PureComponent {
       <div className={styles.extraContent}>
         <Search
           className={styles.extraContentSearch}
-          placeholder="Search..."
+          placeholder="搜索..."
           onSearch={this.handleSearch}
         />
       </div>
@@ -134,14 +134,14 @@ export default class Alarm extends PureComponent {
         onChange={this.handleChange}
       >
         <Card
-          title="Alarm List"
+          title="报警列表"
           bordered={false}
           extra={extraContent}
         >
           <Tabs activeKey={values.alarmType} onChange={this.changeAlarmType}>
-            <TabPane tab="Application" key="APPLICATION">{this.renderList(data.applicationAlarmList)}</TabPane>
-            <TabPane tab="Server" key="SERVER">{this.renderList(data.serverAlarmList)}</TabPane>
-            <TabPane tab="Service" key="SERVICE">{this.renderList(data.serviceAlarmList)}</TabPane>
+            <TabPane tab="应用" key="APPLICATION">{this.renderList(data.applicationAlarmList)}</TabPane>
+            <TabPane tab="服务器" key="SERVER">{this.renderList(data.serverAlarmList)}</TabPane>
+            <TabPane tab="服务" key="SERVICE">{this.renderList(data.serviceAlarmList)}</TabPane>
           </Tabs>
         </Card>
       </Panel>

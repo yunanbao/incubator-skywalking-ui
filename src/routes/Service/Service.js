@@ -82,7 +82,7 @@ export default class Service extends PureComponent {
       <Row gutter={24}>
         <Col xs={24} sm={24} md={24} lg={24} xl={24} style={{ marginTop: 24 }}>
           <ChartCard
-            title="Dependency Map"
+            title="服务依赖图"
             contentHeight={200}
           >
             <Sankey
@@ -134,7 +134,7 @@ export default class Service extends PureComponent {
           <Row gutter={24}>
             <Col xs={24} sm={24} md={24} lg={8} xl={8} style={{ marginTop: 24 }}>
               <ChartCard
-                title="Avg Throughput"
+                title="平均每分钟调用次数"
                 total={`${avgTimeSeries(getServiceThroughputTrend.trendList)} cpm`}
                 contentHeight={46}
               >
@@ -146,7 +146,7 @@ export default class Service extends PureComponent {
             </Col>
             <Col xs={24} sm={24} md={24} lg={8} xl={8} style={{ marginTop: 24 }}>
               <ChartCard
-                title="Avg Response Time"
+                title="平均响应时间"
                 total={`${avgTimeSeries(getServiceResponseTimeTrend.trendList)} ms`}
                 contentHeight={46}
               >
@@ -157,7 +157,7 @@ export default class Service extends PureComponent {
             </Col>
             <Col xs={24} sm={24} md={24} lg={8} xl={8} style={{ marginTop: 24 }}>
               <ChartCard
-                title="Avg SLA"
+                title="平均正常运行时间"
                 total={`${(avgTimeSeries(getServiceSLATrend.trendList) / 100).toFixed(2)} %`}
               >
                 <MiniBar

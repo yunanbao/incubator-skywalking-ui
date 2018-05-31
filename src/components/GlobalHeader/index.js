@@ -110,20 +110,20 @@ export default class GlobalHeader extends PureComponent {
               loading={fetching}
               popupAlign={{ offset: [20, -16] }}
               locale={{
-                emptyText: 'No alert',
-                clear: 'More ',
+                emptyText: '无报警',
+                clear: '更多',
               }}
             >
               <NoticeIcon.Tab
                 list={applications}
-                title="Application"
-                emptyText="No alarm"
+                title="应用报警"
+                emptyText="无报警"
                 emptyImage="https://gw.alipayobjects.com/zos/rmsportal/wAhyIChODzsoKIOBHcBk.svg"
               />
               <NoticeIcon.Tab
                 list={servers}
-                title="Server"
-                emptyText="No alarm"
+                title="服务器报警"
+                emptyText="无报警"
                 emptyImage="https://gw.alipayobjects.com/zos/rmsportal/wAhyIChODzsoKIOBHcBk.svg"
               />
             </NoticeIcon>

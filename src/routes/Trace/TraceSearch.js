@@ -236,7 +236,7 @@ export default class Trace extends PureComponent {
             </Select>
           )}
         </FormItem>
-        <FormItem label="Trace状态">
+        {/* <FormItem label="Trace状态">
           {getFieldDecorator('traceState')(
             <Select placeholder="全部状态" style={{ width: '100%' }}>
               <Option key="all" value="ALL">全部状态</Option>
@@ -252,7 +252,7 @@ export default class Trace extends PureComponent {
               <Option key="BY_DURATION" value="BY_DURATION">响应时间</Option>
             </Select>
           )}
-        </FormItem>
+        </FormItem> */}
         <FormItem label="操作名称">
           {getFieldDecorator('operationName')(
             <Input placeholder="eg Kafka/Trace-topic-1/Consumer" />
